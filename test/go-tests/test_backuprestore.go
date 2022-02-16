@@ -81,7 +81,7 @@ func Test_BackupRestore(t *testing.T) {
 	t.Logf("Creating a new project %s without a GIT Upstream", projectName)
 	shipyardFilePath, err := CreateTmpShipyardFile(testingShipyard)
 	require.Nil(t, err)
-	projectName, err = CreateProject(projectName, shipyardFilePath, true)
+	projectName, err = CreateProject(projectName, shipyardFilePath, true, false)
 	require.Nil(t, err)
 
 	t.Logf("Creating service %s in project %s", serviceName, projectName)
